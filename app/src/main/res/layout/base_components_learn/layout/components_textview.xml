@@ -1,158 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- MD控件自带阴影效果   -->
-    <!-- 去掉，需要指定style   -->
-    <!-- style="@style/Widget.MaterialComponents.Button.UnelevatedButton"   -->
-
-    <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-        android:backgroundTint="#00ff00"
-        app:cornerRadius="20dp"
-        android:text="圆角设置"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        app:strokeColor="@color/teal_200"
-        app:strokeWidth="5dp"
-        app:icon="@android:drawable/star_on"
-        android:padding="5dp"
-        app:iconGravity="textTop"
-        app:iconTint="#ff0000"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-        android:backgroundTint="#00ff00"
-        app:cornerRadius="60dp"
-        android:text="圆角设置设置设置设置"
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:background="#00ff00"
         android:textSize="18dp"
-        android:textColor="@color/black"
-        app:icon="@android:drawable/star_on"
-        android:padding="5dp"
-        app:iconGravity="textEnd"
-        app:iconTint="#ff0000"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-        android:backgroundTint="#00ff00"
-        app:cornerRadius="60dp"
-        android:text="圆角设置设置设置设置"
-        android:textSize="18dp"
-        android:textColor="@color/black"
-        app:icon="@android:drawable/star_on"
-        android:padding="5dp"
-        app:iconGravity="textStart"
-        app:iconTint="#ff0000"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:text="这是一是是是是是是是是是是是是是是是是是是是是是是是一是一一段一段段一段段一段段一段段一段段一段段一段段一段段一段一段段一段段一段段一段段一段一段段一段段一段段一段段一段一段段一段段一段段一段段一段一段段一段段一段段一段段一段一段段一段段一段段一段段一段一段段一段段一段段一段段一段一段段一段段一段段一段段一段一段段一段段一段段一段段一段段一段段一段段一段段一段是一段"
+        android:ellipsize="end"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_horizontal"
+        android:maxLines="6"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:layout_width="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_height="60dp"
-        android:id="@+id/material_toggle_group_1"
-        app:checkedButton="@+id/button1"
-        app:singleSelection="true"
-        app:selectionRequired="true"
-        android:layout_marginTop="50dp">
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:backgroundTint="#00ff00"
-            android:text="Tab1"
-            android:textColor="@color/black"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            app:cornerRadius="20dp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:id="@+id/button1"
-            android:layout_height="match_parent"/>
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:backgroundTint="#ffff00"
-            android:text="Tab2"
-            android:textColor="@color/black"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:id="@+id/button2"
-            android:layout_height="match_parent"/>
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:backgroundTint="#00ffff"
-            android:text="Tab3"
-            android:textColor="@color/black"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:id="@+id/button3"
-            android:layout_height="match_parent"/>
-
-        <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:backgroundTint="#ff0fff"
-            android:text="Tab4"
-            android:textColor="@color/black"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            app:cornerRadius="20dp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:id="@+id/button4"
-            android:layout_height="match_parent"/>
-
-    </com.google.android.material.button.MaterialButtonToggleGroup>
+        android:layout_height="match_parent"/>
 
 
 </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
