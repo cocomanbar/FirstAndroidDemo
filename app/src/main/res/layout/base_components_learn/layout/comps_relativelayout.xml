@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--  relativelayout  -->
+
+    <!--  创建的button，默认自带 insetTop/insetBottom 6dp，通过手动置空为0，这个是无智能提示  -->
+    <!--  定义id，不能相同  -->
+
+    <!--  7个相对于父视图的：（关键词 Parent）  -->
+    <!--  layout_alignParentTop 顶部对齐  -->
+    <!--  layout_alignParentBottom 底部对齐 -->
+    <!--  layout_alignParentLeft 左边对齐  -->
+    <!--  layout_alignParentRight 右边对齐  -->
+    <!--  layout_centerHorizontal 水平居中  -->
+    <!--  layout_centerVertical 垂直居中  -->
+    <!--  layout_centerInParent 水平居中、垂直居中  -->
+
+    <!-- 4个相对兄弟元素的：（关键词：方位）  -->
+    <!-- layout_below：在id元素的下方   -->
+    <!-- layout_above：在id元素的上方   -->
+    <!-- layout_toLeftOf：在id元素的左边   -->
+    <!-- layout_toRightOf：在id元素的右边   -->
+
+    <!-- 4个相对兄弟元素的：（关键词：align）  -->
+    <!-- layout_alignLeft 元素的左边和id元素的左边对齐   -->
+    <!-- layout_alignRight 元素的右边和id元素的右边对齐   -->
+    <!-- layout_alignTop 元素的上边和id元素的上边对齐   -->
+    <!-- layout_alignBottom 元素的低边和id元素的低边对齐   -->
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:backgroundTint="@color/teal_200"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:layout_below="@+id/button1"
+        android:layout_toRightOf="@+id/button1"
+        android:backgroundTint="@color/teal_700"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:layout_below="@+id/button2"
+        android:layout_toRightOf="@+id/button2"
+        android:backgroundTint="@color/teal_200"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:layout_below="@+id/button3"
+        android:layout_toRightOf="@+id/button3"
+        android:backgroundTint="@color/teal_700"/>
+
+</RelativeLayout>

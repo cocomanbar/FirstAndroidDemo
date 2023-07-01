@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--  注释 command + /  -->
+<!--  LinearLayout线性布局讲解  -->
+
+<!--  布局背景色  -->
+<!--  background @color/teal_200  -->
+
+<!--  布局方式 -->
+<!--  线性布局到底是以水平方向逐个排列 还是 垂直方向逐个排列 -->
+<!--  android:orientation="vertical" 容器子view垂直布局（默认靠左靠上） -->
+<!--  android:orientation="horizontal" 容器子view水平布局（默认靠左靠上）-->
+
+<!--  子控件对齐方式 -->
+<!--  决定子控件相对父容器的位置 -->
+<!--  android:gravity="center" 相对于容器的居中布局  -->
+<!--  android:gravity="center_horizontal" 相对于orientation主轴方向的纵向  -->
+<!--  android:gravity="center_vertical" 相对于orientation主轴方向的横向  -->
+
+
+
+
+<!-- demo1 -->
+<!-- android:orientation="vertical" 时改变
+android:gravity 的三种子view相对父容器的显示情况-->
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@color/teal_200"-->
+<!--    android:orientation="vertical"-->
+<!--    android:gravity="center"-->
+<!--    >-->
+<!--    &lt;!&ndash;  注释 command + /  &ndash;&gt;-->
+<!--    &lt;!&ndash;  线性布局讲解  &ndash;&gt;-->
+<!--    &lt;!&ndash;  android: orientation="vertical" 在纵向方向上依次排开  &ndash;&gt;-->
+
+<!--    &lt;!&ndash;  布局属性  &ndash;&gt;-->
+
+<!--    &lt;!&ndash;  背景色  &ndash;&gt;-->
+<!--    &lt;!&ndash;  background @color/teal_200  &ndash;&gt;-->
+
+<!--    &lt;!&ndash;  这里的横与纵相对于 android:orientation="vertical" 的 vertical &ndash;&gt;-->
+<!--    &lt;!&ndash;  gravity = center_horizontal 子view在横向方向相对父容器居中显示  &ndash;&gt;-->
+<!--    &lt;!&ndash;  gravity = center_vertical 子view纵向方向相对父容器居中显示  &ndash;&gt;-->
+<!--    &lt;!&ndash;  gravity = center 子view 横向水平和纵向方向居中显示  &ndash;&gt;-->
+
+
+
+<!--    &lt;!&ndash;  子 view 设置 与 属性  &ndash;&gt;-->
+
+<!--    &lt;!&ndash;  覆盖父视图的颜色背景  &ndash;&gt;-->
+<!--    &lt;!&ndash;  linear布局内部 backgroundTint  &ndash;&gt;-->
+<!--    -->
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:backgroundTint="#ff0000"/>-->
+
+<!--    <Button-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:backgroundTint="#00ff00"/>-->
+
+<!--    <Button-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:backgroundTint="#0000ff"/>-->
+
+<!--</LinearLayout>-->
+
+
+
+
+<!-- demo2 -->
+<!-- android:orientation="horizontal" 时改变
+android:gravity 的三种子view相对父容器的显示情况-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    >
+
+    <!--  android: orientation="horizontal" 在横向方向上依次排开  -->
+
+    <!--  布局属性  -->
+
+    <!--  背景色  -->
+    <!--  background @color/teal_200  -->
+
+    <!--  这里的横与纵相对于 android:orientation="horizontal" -->
+    <!--  gravity = center_horizontal 子view在纵向方向相对父容器居中显示  -->
+    <!--  gravity = center_vertical 子view纵向方向相对父容器居中显示  -->
+    <!--  gravity = center 子view 横向水平和纵向方向居中显示  -->
+
+
+
+    <!--  子 view 设置 与 属性  -->
+
+    <!--  覆盖父视图的颜色背景  -->
+    <!--  linear布局内部 backgroundTint  -->
+
+    <!--  在LinearLayout布局里，layout_weight 按比例分配  -->
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#ff0000"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="2"
+        android:backgroundTint="#00ff00"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:backgroundTint="#0000ff"/>
+
+</LinearLayout>
+

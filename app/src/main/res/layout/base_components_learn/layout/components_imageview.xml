@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!-- 1行   -->
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--  fitCenter  -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="#666666"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fitCenter"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/teal_200"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#ff0000"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_launcher"
+                />
+        </LinearLayout>
+
+        <!--  fitStart  -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="#666666"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fitStart"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/teal_200"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#ff0000"
+                android:scaleType="fitStart"
+                android:src="@mipmap/ic_launcher"
+                />
+        </LinearLayout>
+
+        <!--  fitEnd  -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="#666666"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fitEnd"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/teal_200"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#ff0000"
+                android:scaleType="fitEnd"
+                android:src="@mipmap/ic_launcher"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 2行   -->
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--  centerCrop  -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="#666666"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="centerCrop"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/teal_200"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#ff0000"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                />
+        </LinearLayout>
+
+        <!--  centerInside  -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="#666666"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="centerInside"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/teal_200"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#ff0000"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_launcher"
+                />
+        </LinearLayout>
+
+        <!--  fitXY  -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="#666666"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fitXY"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/teal_200"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#ff0000"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 3行   -->
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--  matrix  -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="#666666"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="matrix"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/teal_200"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#ff0000"
+                android:scaleType="matrix"
+                android:src="@mipmap/ic_launcher"
+                />
+        </LinearLayout>
+
+        <!--  center  -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="#666666"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="center"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/teal_200"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#ff0000"
+                android:scaleType="center"
+                android:src="@mipmap/ic_launcher"
+                />
+        </LinearLayout>
+
+        <!--  alpha 0.5 -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="#666666"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="alpha 0.5"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/teal_200"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="#ff0000"
+                android:scaleType="fitXY"
+                android:alpha="0.5"
+                android:src="@mipmap/ic_launcher"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

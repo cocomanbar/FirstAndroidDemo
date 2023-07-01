@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <!-- 布局简单只有五个   -->
+
+    <!-- 首先是约定布局的整体布局，组件相对于父容器的位置  -->
+    <!-- android:layout_gravity="center"  -->
+    <!-- android:layout_gravity="center_vertical"  -->
+    <!-- android:layout_gravity="center_horizontal"  -->
+
+    <!-- 元素的布局属性   -->
+    <!-- layout_marginTop   -->
+
+
+    <Button
+        android:text="layout_g"
+        android:backgroundTint="#ff0000"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+
+    <Button
+        android:text="haha"
+        android:backgroundTint="#00ff00"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+
+</FrameLayout>
