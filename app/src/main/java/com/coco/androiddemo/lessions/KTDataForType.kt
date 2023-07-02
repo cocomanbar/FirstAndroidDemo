@@ -31,4 +31,14 @@ fun main() {
     } while (num < 10)
     println("结束")
 
+    for (index in 0..9) {
+        if (index % 2 == 0) {
+            continue
+        }
+        if (index == 9) {
+            break
+        }
+        println("index = $index")
+    }
+
 }
