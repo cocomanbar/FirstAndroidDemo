@@ -26,14 +26,14 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         // 不需要通过find xxx，引入插件后，直接通过id 查找对应的view模块
 
         // HORIZONTAL -> R.layout.lessionlist_item_linear_horizontal
-        // recycler_view_example_vertical.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        recycler_view_example_vertical.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
         // VERTICAL -> R.layout.lessionlist_item_linear_vertical
-         recycler_view_example_vertical.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        // recycler_view_example_vertical.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
         recycler_view_example_vertical.adapter = MyAdapter()
 
-        
+
     }
 
     // inner 修饰内部类，可以使用内部参数
@@ -44,7 +44,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
             val itemView: View = LayoutInflater.from(context)
-                .inflate(R.layout.lessionlist_item_linear_vertical, parent, false)
+                .inflate(R.layout.lessionlist_item_linear_horizontal, parent, false)
             return MyViewHolder(itemView)
         }
 
