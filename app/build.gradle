@@ -35,19 +35,6 @@ android {
     buildFeatures {
         viewBinding true
     }
-
-    // layout 文件夹区分业务的
-    sourceSets {
-        main {
-            res.srcDirs = [
-                    'src/main/res',
-                    'src/main/res/layout',
-                    'src/main/res/layout/main',
-                    'src/main/res/layout/base_components_learn',
-                    'src/main/res/layout/examples',
-            ]
-        }
-    }
 }
 
 dependencies {

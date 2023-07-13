@@ -1,0 +1,21 @@
+
+RecyclerView 族谱
+
+LayoutManager 负责布局
+    - LinearLayout      列表
+    - GridLayout        网格
+    - StaggeredLayout   瀑布流
+
+RecyclerView.Adapter 负责列表数据源的适配
+RecyclerView.ViewHolder 负责列表itemView复用
+
+
+进阶
+
+- DiffUtil 增量差分刷新
+- onItemTouchListener 手势处理
+- ItemDecoration item样式装饰器
+- ItemAnimator Item动画
+- SnapHelper 惯性动画
+- SmoothScroller 滑动速度控制
+- Recycler 四级回收/复用机制

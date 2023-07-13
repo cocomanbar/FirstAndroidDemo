@@ -32,5 +32,6 @@ class MainActivity : AppCompatActivity() {
         // 主题已经设置成无状态栏，无需设置
         // setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
     }
 }
