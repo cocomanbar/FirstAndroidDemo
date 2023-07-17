@@ -11,9 +11,11 @@ import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintSet.Layout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.coco.androiddemo.R
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.lessionlist_item_linear_vertical.view.*
@@ -25,15 +27,25 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         // 不需要通过find xxx，引入插件后，直接通过id 查找对应的view模块
 
-        // HORIZONTAL -> R.layout.lessionlist_item_linear_horizontal
-        recycler_view_example_vertical.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        // 列表布局
 
-        // VERTICAL -> R.layout.lessionlist_item_linear_vertical
+        //  R.layout.lessionlist_item_linear_horizontal
+        // recycler_view_example_vertical.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
+        //  R.layout.lessionlist_item_linear_vertical
         // recycler_view_example_vertical.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
+        // 网格布局
+
+        // lessionlist_item_grid
+        // recycler_view_example_vertical.layoutManager = GridLayoutManager(context, 2)
+
+        // 瀑布流布局
+
+        // lessionlist_item_grid
+        recycler_view_example_vertical.layoutManager = StaggeredGridLayoutManager(2, RecyclerView.VERTICAL)
+
         recycler_view_example_vertical.adapter = MyAdapter()
-
-
     }
 
     // inner 修饰内部类，可以使用内部参数
@@ -44,7 +56,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
             val itemView: View = LayoutInflater.from(context)
-                .inflate(R.layout.lessionlist_item_linear_horizontal, parent, false)
+                .inflate(R.layout.lessionlist_item_grid, parent, false)
             return MyViewHolder(itemView)
         }
 
@@ -64,6 +76,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             holder.itemView.item_title.text = "${position}移动架构师课程"
             // 副标题
             holder.itemView.item_message.text = "深耕移动端领域7年有余，架构及技术团队管理经验丰富，擅长Android 、Java、Weex、JSBridge"
+
+            // 测试瀑布流布局
+            if (position % 2 == 0) {
+                holder.itemView.item_message.maxLines = 2
+            } else {
+                holder.itemView.item_message.maxLines = 5
+            }
         }
 
     }
