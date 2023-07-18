@@ -22,4 +22,11 @@
         android:name="com.coco.androiddemo.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_study"
+        android:name="com.coco.androiddemo.ui.study.StudyFragment"
+        android:label="@string/title_study"
+        tools:layout="@layout/fragment_study" />
+
 </navigation>

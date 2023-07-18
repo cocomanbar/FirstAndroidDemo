@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="150dp">
+
+    <!--  图片  -->
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_study_image"
+        />
+
+    <!--  右边文字垂直布局  -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <!--   标题     -->
+        <TextView
+            android:id="@+id/item_course_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android Multidex原理及实现"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_marginTop="10dp"
+            android:id="@+id/item_course_button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="特价优惠"
+            android:textSize="14dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:backgroundTint="#fdf6e5"
+            android:textColor="#b49d70"
+            android:padding="0dp"
+            />
+
+        <!-- 已学标题      -->
+        <TextView
+            android:id="@+id/item_course_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="最近学习 已学60%"
+            android:textSize="14dp"
+            android:textColor="#666666"
+            android:textStyle="normal"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/item_course_more"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_studymore"
+        android:layout_gravity="bottom"
+        android:scaleType="fitXY"
+        />
+
+</LinearLayout>
