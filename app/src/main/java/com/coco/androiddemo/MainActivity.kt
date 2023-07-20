@@ -26,12 +26,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun testNetwork() {
 
-        // HiOkHttp.networkAsyncGet("user/query?userId=1600932269")
+         HiOkHttp.networkAsyncGet("user/query?userId=1600932269")
 
         // HiOkHttp.networkAsyncPost("tag/toggleTagFollow", mapOf("a" to "b"))
 
         // HiOkHttp.networkAsyncPostJSONString()
 
-        HiOkHttp.networkAsyncPostString()
+        // HiOkHttp.networkAsyncPostString()
     }
 }

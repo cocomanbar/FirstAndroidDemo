@@ -13,6 +13,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody
 import okhttp3.Response
+import okhttp3.logging.HttpLoggingInterceptor
 import org.json.JSONObject
 import java.io.IOException
 import java.io.File
@@ -22,11 +23,24 @@ object HiOkHttp {
 
     private const val base_url: String = "http://123.56.232.18:8080/serverdemo"
 
-    private val  client: OkHttpClient = OkHttpClient.Builder()  // 构造器
-        .connectTimeout(15, TimeUnit.SECONDS)   // 连接超时
-        .readTimeout(15, TimeUnit.SECONDS)      // 读取超时
-        .writeTimeout(15, TimeUnit.SECONDS)     // 写超时
-        .build()
+    private val  client: OkHttpClient
+
+    init {
+
+        // 自带的，会有多余的信息打印
+//        val httpLoggingInterceptor = HttpLoggingInterceptor()
+//        httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
+
+        // LoggingInterceptor()
+        val httpLoggingInterceptor = LoggingInterceptor()
+
+        client = OkHttpClient.Builder()  // 构造器
+            .connectTimeout(15, TimeUnit.SECONDS)   // 连接超时
+            .readTimeout(15, TimeUnit.SECONDS)      // 读取超时
+            .writeTimeout(15, TimeUnit.SECONDS)     // 写超时
+            .addInterceptor(httpLoggingInterceptor)         // 网络监听
+            .build()
+    }
 
     // android 分为主线程、子线程
     // 主线程就是app一起动，android framework 层会启动一个线程
