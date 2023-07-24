@@ -81,13 +81,19 @@ class StudyFragment: Fragment(R.layout.fragment_study) {
         }
 
         fun addCouse(course: StudyCourse) {
-            val index = 0
+
+            // 当插入的下标是0时需要scrollToPosition 才可以显示
+            // 其他的下标就应该不用，注意下
+            val index = 1
             courseList.add(index = index, course)
 
             //notifyDataSetChanged()
 
             notifyItemInserted(index)
-            recycler_view.scrollToPosition(index)
+
+            if (index == 0) {
+                recycler_view.scrollToPosition(index)
+            }
         }
 
         fun removeAt(index: Int) {
