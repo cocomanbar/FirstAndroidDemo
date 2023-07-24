@@ -17,7 +17,10 @@ import com.coco.androiddemo.R
 import com.coco.androiddemo.network.ApiServer
 import com.coco.androiddemo.network.ApiStudy
 import com.coco.androiddemo.network.HiRetrofit
+import kotlinx.android.synthetic.main.fragment_study.add_my_article
+import kotlinx.android.synthetic.main.fragment_study.delete_my_article
 import kotlinx.android.synthetic.main.fragment_study.recycler_view
+import kotlinx.android.synthetic.main.fragment_study.update_my_article
 import kotlinx.android.synthetic.main.item_fragemnet_study.view.item_course_button
 import kotlinx.android.synthetic.main.item_fragemnet_study.view.item_course_detail
 import kotlinx.android.synthetic.main.item_fragemnet_study.view.item_course_more
@@ -38,6 +41,7 @@ class StudyFragment: Fragment(R.layout.fragment_study) {
         val adapter: StudyAdapter = StudyAdapter()
         recycler_view.adapter = adapter
 
+        // 网络数据请求，本地的mock
         HiRetrofit.create(ApiStudy::class.java)
             .getStudyList().enqueue(object : Callback<List<StudyCourse>>{
                 override fun onFailure(call: Call<List<StudyCourse>>, t: Throwable) {
@@ -49,19 +53,50 @@ class StudyFragment: Fragment(R.layout.fragment_study) {
                 }
             })
 
+        // 点击事件
+        delete_my_article.setOnClickListener {
+            adapter.removeAt(0)
+        }
+        update_my_article.setOnClickListener {
+            adapter.updateAt(0, "修改了标题...")
+        }
+        add_my_article.setOnClickListener {
+            val course = StudyCourse(label = "安卓", poster = "", progress = "已学 60%", title = "这是条mock数据，可以看看")
+            adapter.addCouse(course)
+        }
     }
 
     inner class StudyAdapter : RecyclerView.Adapter<StudyAdapter.StudyViewHolder>() {
 
-        private val course = mutableListOf<StudyCourse>()
+        private val courseList = mutableListOf<StudyCourse>()
 
         fun setDatas(datas: List<StudyCourse>?) {
             datas?.let {
                 if (it.isNotEmpty()) {
-                    course.addAll(it)
+                    courseList.addAll(it)
                     // 刷新
                     notifyDataSetChanged()
                 }
+            }
+        }
+
+        fun addCouse(course: StudyCourse) {
+            courseList.add(course)
+            notifyDataSetChanged()
+        }
+
+        fun removeAt(index: Int) {
+            if (index < courseList.size) {
+                courseList.removeAt(index)
+                notifyDataSetChanged()
+            }
+        }
+
+        fun updateAt(index: Int, title: String) {
+            if (index < courseList.size) {
+                val course = courseList[index]
+                course.title = title
+                notifyItemChanged(index)
             }
         }
 
@@ -71,12 +106,12 @@ class StudyFragment: Fragment(R.layout.fragment_study) {
         }
 
         override fun getItemCount(): Int {
-            return course.size
+            return courseList.size
         }
 
         override fun onBindViewHolder(holder: StudyViewHolder, position: Int) {
 
-            val course = this.course[position]
+            val course = this.courseList[position]
 
             // 加载图片与绑定
             val option = RequestOptions()
