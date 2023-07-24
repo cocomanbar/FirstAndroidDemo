@@ -17,14 +17,15 @@ import retrofit2.http.PartMap
 import retrofit2.http.Query
 import retrofit2.http.QueryMap
 import java.util.concurrent.TimeUnit
-
+import com.coco.androiddemo.ui.study.StudyCourse
 
 // RESTFUL网络请求框架Retrofit
 // https://github.com/square/retrofit
 
 object HiRetrofit {
 
-    private const val base_url: String = "http://123.56.232.18:8080/serverdemo/"
+    //  http://123.56.232.18:8080/serverdemo/
+    private const val base_url: String = "http://10.0.2.2:4523/m1/3058746-0-default/"
 
     private  val httpLoggingInterceptor = LoggingInterceptor()
 
@@ -46,6 +47,13 @@ object HiRetrofit {
     }
 }
 
+interface ApiStudy {
+
+    @GET(value = "study_list")
+    fun getStudyList() : Call<List<StudyCourse>>
+
+
+}
 
 interface ApiServer {
 
