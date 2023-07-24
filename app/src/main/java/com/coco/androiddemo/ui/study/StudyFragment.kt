@@ -81,14 +81,19 @@ class StudyFragment: Fragment(R.layout.fragment_study) {
         }
 
         fun addCouse(course: StudyCourse) {
-            courseList.add(course)
-            notifyDataSetChanged()
+            val index = 0
+            courseList.add(index = index, course)
+
+            //notifyDataSetChanged()
+
+            notifyItemInserted(index)
+            recycler_view.scrollToPosition(index)
         }
 
         fun removeAt(index: Int) {
             if (index < courseList.size) {
                 courseList.removeAt(index)
-                notifyDataSetChanged()
+                notifyItemRemoved(index)
             }
         }
 
