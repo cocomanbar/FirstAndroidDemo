@@ -1,0 +1,28 @@
+
+Activity 用于显示界面，通过它完成交互
+应用允许有0个或多个Activity
+
+必知必会：
+    1.Activity创建与AndroidManifest.xml注册
+    2.Activity生命周期
+    3.Activity两类启动方式
+    4.Activity启动传参与返回
+    5.启动系统常见的Activity(相机、相册、电话...)
+
+ 进阶:
+    1.Activity的四种启动模式
+    2.Activity的生命周期原理与切面编程
+    3.Activity启动原理(重点)
+    4.Activity动态统一路由（重点）
+    5.如何启动其他应用的Activity？（启动微信的分享Activity？）
+    6.说一下Activity和window，view的联系？
+    7.横竖屏的Activity的生命周期变化？
+
+
+
+
+
+
+
+
+

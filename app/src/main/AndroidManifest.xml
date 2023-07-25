@@ -32,20 +32,33 @@
         android:theme="@style/Theme.AndroidDemo"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
+        <!--  启动的 Activity     -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <!-- 配置自定义Activity   -->
+        <activity
+            android:name=".lessions.activity.SecondActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.androidDemo.lessions.activity.SECONDACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
     </application>
 
 </manifest>
