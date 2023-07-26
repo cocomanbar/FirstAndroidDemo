@@ -47,13 +47,25 @@
                 android:value="" />
         </activity>
 
-        <!-- 配置自定义Activity   -->
+        <!-- SecondActivity 显示跳转   -->
         <activity
             android:name=".lessions.activity.SecondActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="com.androidDemo.lessions.activity.SECONDACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- ThreeActivity  可显示可隐式(需要 action / category) -->
+        <activity
+            android:name=".lessions.activity.ThreeActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.androidDemo.lessions.activity.ThreeActivity" />
+                <category android:name="com.androidDemo.lessions.activity.ThreeActivity"/>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
