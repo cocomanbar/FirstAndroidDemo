@@ -1,0 +1,18 @@
+
+
+Fragment 不能单独使用，需要配合Activity
+
+什么是Fragment
+Fragment与Activity的关系
+Fragment的生命周期
+在Activity里动态加载Fragment
+试验实现Tab底部导航结构
+
+
+进阶
+FragmentPageAdapter与FragmentStatePageAdapter的区别和使用场景
+Fragment中add与replace的区别
+
+getFragmentManager
+getSupperFragmentManager
+getChildFragmentManager

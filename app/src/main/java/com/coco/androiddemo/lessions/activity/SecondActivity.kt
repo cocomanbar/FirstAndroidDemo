@@ -8,6 +8,8 @@ import android.view.Gravity
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.result.contract.ActivityResultContracts
+import com.coco.androiddemo.lessions.fragment.SecondFragment
+import com.coco.androiddemo.R
 
 // 如何使用这个`SecondActivity`，需要AndroidManifest.xml注册
 class SecondActivity: AppCompatActivity() {
@@ -22,34 +24,54 @@ class SecondActivity: AppCompatActivity() {
         // 第一次创建时进行调用，在这个方法里通常做Activity的初始化工作，例如：加载布局，绑定事件
         Log.e("Activity-Second", "onCreate")
 
-        val textView = TextView(this)
-        textView.text = "Jump To ThreeActivity"
-        textView.gravity = Gravity.CENTER_VERTICAL
-        setContentView(textView)
 
-        val activity = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            it.resultCode
-            it.data
-            val data = it.data?.getStringExtra("key3")
-            textView.text = "come from ThreeActivity + $data"
+        // Fragment 布局需要这个Layout
+        setContentView(R.layout.activity_second)
+
+        val fragment = SecondFragment()
+        // 传参，使用bundle，赋值给fragment
+        val bundle = Bundle()
+        bundle.putString("key1", "value1")
+        bundle.putInt("key2", 100)
+        fragment.arguments = bundle
+
+        val ft = supportFragmentManager.beginTransaction()
+        // 仅当没有添加过时，可以添加
+        if (!fragment.isAdded()) {
+            // R.id.container 是指当前 SecondActivity 的 xml布局对象id
+            ft.add(R.id.container, fragment)
         }
+        // 事务对象，需要commit
+        ft.commitAllowingStateLoss()
 
-        textView.setOnClickListener {
-
-            if (canFinished) {
-                setResult(Activity.RESULT_OK)
-                finish()
-                return@setOnClickListener
-            }
-            canFinished = true
-
-            // 隐式跳转 Activity，不需要接入类
-            val intent = Intent()
-            intent.setAction("com.androidDemo.lessions.activity.ThreeActivity")
-            intent.putExtra("key1", "字符串123")
-            intent.putExtra("key2", 100)
-            activity.launch(intent)
-        }
+//        val textView = TextView(this)
+//        textView.text = "Jump To ThreeActivity"
+//        textView.gravity = Gravity.CENTER_VERTICAL
+//        setContentView(textView)
+//
+//        val activity = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+//            it.resultCode
+//            it.data
+//            val data = it.data?.getStringExtra("key3")
+//            textView.text = "come from ThreeActivity + $data"
+//        }
+//
+//        textView.setOnClickListener {
+//
+//            if (canFinished) {
+//                setResult(Activity.RESULT_OK)
+//                finish()
+//                return@setOnClickListener
+//            }
+//            canFinished = true
+//
+//            // 隐式跳转 Activity，不需要接入类
+//            val intent = Intent()
+//            intent.setAction("com.androidDemo.lessions.activity.ThreeActivity")
+//            intent.putExtra("key1", "字符串123")
+//            intent.putExtra("key2", 100)
+//            activity.launch(intent)
+//        }
     }
 
     override fun onStart() {

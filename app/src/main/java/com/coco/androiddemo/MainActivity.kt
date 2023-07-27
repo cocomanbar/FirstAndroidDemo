@@ -39,26 +39,12 @@ class MainActivity : AppCompatActivity() {
         textView.text = "Jump To SecondActivity."
         textView.gravity = Gravity.CENTER
         setContentView(textView)
-
         textView.setOnClickListener {
-
             // 显式普通初始化，不需要回参
              val intent = Intent(this, SecondActivity::class.java)
              startActivity(intent)
-
-            // 带参数初始化，不需要回参
-//             val intent = Intent(this, SecondActivity::class.java)
-//             intent.putExtra("key1", "value1")
-//             intent.putExtra("key2", 100)
-//             startActivity(intent)
-
-            // 跳转带回参
-//            val intent = Intent(this, SecondActivity::class.java)
-//            intent.putExtra("key1", "value1")
-//            intent.putExtra("key2", 100)
-//            activity.launch(intent)
-
         }
+
 
         // 测试网络请求
         // testHiHttp()
