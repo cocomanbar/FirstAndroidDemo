@@ -16,6 +16,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.coco.androiddemo.databinding.ActivityMainBinding
 import com.coco.androiddemo.lessions.activity.SecondActivity
+import com.coco.androiddemo.lessions.service.TestServiceActivity
 import com.coco.androiddemo.network.ApiServer
 import com.coco.androiddemo.network.HiOkHttp
 import com.coco.androiddemo.network.HiRetrofit
@@ -41,8 +42,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(textView)
         textView.setOnClickListener {
             // 显式普通初始化，不需要回参
-             val intent = Intent(this, SecondActivity::class.java)
-             startActivity(intent)
+            // SecondActivity
+            // TestServiceActivity
+            val intent = Intent(this, TestServiceActivity::class.java)
+            startActivity(intent)
         }
 
 
