@@ -5,7 +5,7 @@ Service
 两种启动方式（普通启动，绑定启动）
 生命周期
 activity和service的交互
-8.0之后的改动
+8.0之后的改动：不允许后台启动Service服务?
 
 进阶
 LifecycleService
@@ -14,5 +14,13 @@ JobService
 IntentService
 
 
+
+
+// 1. 8.0之后的改动：不允许后台启动Service服务?
+// 有通用的解决方案
+// 加权限，判断系统版本
+// 以及规定时间发个前台通知
+
+// 系统判断app是不是在后台是根据时间来的  60s，离谱~
 
 

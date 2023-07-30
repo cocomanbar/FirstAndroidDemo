@@ -3,6 +3,7 @@ package com.coco.androiddemo.lessions.service
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.os.IBinder
 import androidx.appcompat.app.AppCompatActivity
@@ -40,7 +41,6 @@ class TestServiceActivityB: AppCompatActivity() {
 
         }
 
-        // 强行解绑 !!
         bind.setOnClickListener {
             val intent = Intent(this, TestServiceB::class.java)
             connection?.let {

@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             // SecondActivity
             // TestServiceActivityA
             // TestServiceActivityB
-            val intent = Intent(this, TestServiceActivityB::class.java)
+            val intent = Intent(this, TestServiceActivityA::class.java)
             startActivity(intent)
         }
 
