@@ -5,24 +5,15 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
 import android.widget.TextView
-import androidx.activity.result.ActivityResultCallback
-import androidx.activity.result.contract.ActivityResultContract
-import androidx.activity.result.contract.ActivityResultContracts
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import com.coco.androiddemo.databinding.ActivityMainBinding
-import com.coco.androiddemo.lessions.activity.SecondActivity
-import com.coco.androiddemo.lessions.service.TestServiceActivity
+import com.coco.androiddemo.lessions.service.TestServiceActivityA
 import com.coco.androiddemo.network.ApiServer
 import com.coco.androiddemo.network.HiOkHttp
 import com.coco.androiddemo.network.HiRetrofit
 import com.coco.androiddemo.network.UserJson
 import retrofit2.Call
 import retrofit2.Response
+import com.coco.androiddemo.lessions.service.TestServiceActivityB
 
 class MainActivity : AppCompatActivity() {
 
@@ -43,8 +34,9 @@ class MainActivity : AppCompatActivity() {
         textView.setOnClickListener {
             // 显式普通初始化，不需要回参
             // SecondActivity
-            // TestServiceActivity
-            val intent = Intent(this, TestServiceActivity::class.java)
+            // TestServiceActivityA
+            // TestServiceActivityB
+            val intent = Intent(this, TestServiceActivityB::class.java)
             startActivity(intent)
         }
 

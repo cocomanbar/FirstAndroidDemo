@@ -72,8 +72,10 @@
 
         <!--  TestServiceA   -->
         <service android:name=".lessions.service.TestServiceA"></service>
+        <service android:name=".lessions.service.TestServiceB"></service>
         <!--   TestServiceActivity     -->
-        <activity android:name=".lessions.service.TestServiceActivity"></activity>
+        <activity android:name=".lessions.service.TestServiceActivityA"></activity>
+        <activity android:name=".lessions.service.TestServiceActivityB"></activity>
 
     </application>
 
