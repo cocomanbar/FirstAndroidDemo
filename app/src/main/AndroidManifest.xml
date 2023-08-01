@@ -5,6 +5,7 @@
 
     <!--  声明权限：  -->
     <!--  网络请求权限  -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <!--  写权限  -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -12,7 +13,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!--  前台运行service权限  -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-
 
 
     <!--  节点设置  -->
@@ -79,6 +79,9 @@
         <!--   TestServiceActivity     -->
         <activity android:name=".lessions.service.TestServiceActivityA"></activity>
         <activity android:name=".lessions.service.TestServiceActivityB"></activity>
+
+        <!--  测试广播      -->
+        <activity android:name=".lessions.broadcast_receiver.TestBroadcastReceiverActivity" />
 
     </application>
 

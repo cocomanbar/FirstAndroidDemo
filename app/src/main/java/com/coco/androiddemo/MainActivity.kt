@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.Gravity
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.coco.androiddemo.lessions.broadcast_receiver.TestBroadcastReceiverActivity
 import com.coco.androiddemo.lessions.service.TestServiceActivityA
 import com.coco.androiddemo.network.ApiServer
 import com.coco.androiddemo.network.HiOkHttp
@@ -36,7 +37,8 @@ class MainActivity : AppCompatActivity() {
             // SecondActivity
             // TestServiceActivityA
             // TestServiceActivityB
-            val intent = Intent(this, TestServiceActivityA::class.java)
+            // TestBroadcastReceiverActivity
+            val intent = Intent(this, TestBroadcastReceiverActivity::class.java)
             startActivity(intent)
         }
 
