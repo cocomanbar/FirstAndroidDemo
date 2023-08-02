@@ -1,0 +1,26 @@
+
+
+ContentProvider APP间的数据交互
+在应用里访问别的应用暴露的数据，比如手机联系人、相册、短信等我们想对这些数据读取或操作，就需要它。
+我们自己的应用也可以通过它暴露数据，也可以选择要暴露的数据。
+
+运行时的权限申请
+读取联系人
+更新联系人
+删除联系人
+插入联系人
+读取短信收件箱
+
+
+进阶
+ContentProvider 跨app通信
+ContentProvider 跨进程通信
+ContentProvider 自定义
+ContentProvider 监听数据变化
+
+
+
+
+
+
+
