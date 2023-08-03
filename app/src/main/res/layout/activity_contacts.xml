@@ -10,8 +10,8 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/open_permission"
-            android:text="相册权限"
+            android:id="@+id/add_contacts"
+            android:text="增加"
             android:insetTop="0dp"
             android:insetBottom="0dp"
             android:padding="0dp"
@@ -21,7 +21,7 @@
 
         <Button
             android:id="@+id/get_contacts"
-            android:text="查询"
+            android:text="读取"
             android:insetTop="0dp"
             android:insetBottom="0dp"
             android:padding="0dp"
