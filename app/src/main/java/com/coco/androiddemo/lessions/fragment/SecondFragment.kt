@@ -30,7 +30,7 @@ class SecondFragment: Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         // 创建该Fragment的视图
         Log.e("Fragment-Second", "onCreateView")

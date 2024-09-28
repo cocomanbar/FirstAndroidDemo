@@ -14,8 +14,6 @@ import com.coco.androiddemo.R
 // 如何使用这个`SecondActivity`，需要AndroidManifest.xml注册
 class SecondActivity: AppCompatActivity() {
 
-    var canFinished: Boolean = false
-
     // 重写一个参数的 onCreate()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
